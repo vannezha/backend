@@ -66,7 +66,7 @@ const getAllBooksHandler = (request, h) => {
   const { reading, finished } = request.query;
   const nama = request.query.name;
 
-  if (nama) {
+  if (nama !== undefined) {
     const newBook = [];
     books.forEach((book) => {
       if (nama.toLowerCase() === book.name.toLowerCase()) {
